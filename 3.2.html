@@ -1,0 +1,110 @@
+# laba-3
+<!DOCTYPE html>
+<html>
+<head>
+<title>Вариант 2</title>
+<meta charset="UTF-8" />
+<style>
+body {
+border: 1px solid #E0E0E0;
+width:655px;
+margin: 5px auto;
+padding: 10px;
+}
+p {
+font-family: Arial;
+font-size: 14px;
+margin: 2px;
+}
+.btn {
+width: 300px;
+margin: 10px;
+padding: 5px 0;
+font-family: Arial;
+font-size: 16px;
+cursor: pointer;
+}
+.block {
+width: 655px;
+border-bottom: 1px solid #999999;
+padding: 5px 0;
+display: none;
+overflow: hidden;
+}
+.back {
+display: block;
+float: left;
+padding: 5px 10px;
+font-family: Arial;
+font-size: 16px;
+color: #000000;
+border: 1px solid #E0E0E0;
+background: #FFFFFF;
+cursor: pointer;
+border-radius: 3px;
+margin: 20px -12px;
+text-decoration: none;
+transition: 0.25s linear background;
+}
+.back:hover { background: #E0E0E0; }
+</style>
+<script src="../jquery.js"></script>
+<script>
+$(document).ready(function(){
+$rand = [6, 7];
+function rand(){
+$num = Math.floor(Math.random() * (6 - 1)) + 1;
+if(!$rand.indexOf($num)) setTimeout(rand(), $num * 10);
+else {
+$rand.push($num);
+return $num;
+}
+}
+$('.first').click(function(){
+$tmp = '#div' + rand();
+$($tmp).slideDown(3000);
+});
+$('.second').click(function(){
+$('.block').slideDown(3000);
+});
+});
+</script>
+</head>
+<body>
+<button class="btn first">переключить</button>
+<button class="btn second">включить</button>
+<div id="div1" class="block">
+<p>jQuery — библиотека, которая позволяет делать код короче, а также позволяет внутри</p>
+<p>страницы настроить код, который бы !!! срабатывал как триггер (предопределенный</p>
+<p>набор действий, который выполняется автоматически при наступлении связанного с</p>
+<p>ним события, если этот код описываем в области &lt;head&gt; … &lt;/head&gt;).</p>
+</div>
+<div id="div2" class="block">
+<p>JQuery упрощает работу с JavaScript, а также вызовы AJAX и DOM-манипуляции</p>
+<p>Есть много фреймворков JavaScript, но JQuery, является самым популярным и</p>
+<p>используемым за счет своей расширяемости</p>
+</div>
+<div id="div3" class="block">
+<p>jQuery селекторы позволяют вам делать выборку (поиск) и манипулировать с элементами</p>
+<p>HTML. Селекторы по сути это набор условных обозначений и правил для выборки и</p>
+<p>манипулирования (в конце лабораторной в приложении дан большой список примеров</p>
+<p>селекторов).</p>
+</div>
+<div id="div4" class="block">
+<p>С jQuery селекторами вы можете найти элементы страницы, основанные на</p>
+<p>идентификаторе id, классах (class), типах (type), атрибутах (attribute), значениях атрибутов</p>
+<p>(value) и др. Также они базируются и на CSS Selectors, в дополнении вы можете создать</p>
+<p>свой селектор. Все типы селекторов в jQuery начинаются с указания $ и парных скобок: $()</p>
+</div>
+<div id="div5" class="block">
+<p>JQuery библиотека содержит следующий функционал:</p>
+<p>- операции с HTML/DOM (манипулирование компонентами HTML/DOM)</p>
+<p>- операции с CSS-селекторами</p>
+<p>- HTML-обработчики событий</p>
+<p>- Эффекты анимации</p>
+<p>- AJAX</p>
+<p>- Utilities</p>
+</div>
+<br/>
+</body>
+</html>
