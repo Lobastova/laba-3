@@ -1,0 +1,81 @@
+# laba-3
+<!DOCTYPE html>
+<html>
+<head>
+<title>Вариант 1</title>
+<meta charset="UTF-8" />
+<style>
+body {
+border: 1px solid #E0E0E0;
+width: 755px;
+margin: 5px auto;
+padding: 10px;
+}
+p {
+font-family: Arial;
+font-size: 14px;
+margin: 5px 0;
+}
+.btn {
+width: 735px;
+margin: 10px;
+padding: 5px 0;
+font-family: Arial;
+font-size: 16px;
+cursor: pointer;
+}
+img {
+margin: 0 10px;
+cursor: pointer;
+opacity: 0.8;
+filter: alpha(opacity=80);
+transition: 0.15s linear opacity;
+}
+img:hover {
+opacity: 1.0;
+filter: alpha(opacity=100);
+}
+.back {
+display: block;
+float: left;
+padding: 5px 10px;
+font-family: Arial;
+font-size: 16px;
+color: #000000;
+border: 1px solid #E0E0E0;
+background: #FFFFFF;
+cursor: pointer;
+border-radius: 3px;
+margin: 20px -12px;
+text-decoration: none;
+transition: 0.25s linear background;
+}
+.back:hover { background: #E0E0E0; }
+</style>
+<script src="../jquery.js"></script>
+<script class="script">
+$(document).ready(function(){
+$('.btn').click(function(){
+$('p').eq(2).animate({'marginLeft':100}, 500);
+$('p').eq(4).animate({'marginLeft':100}, 500);
+});
+$('img').click(function(){
+$(this).animate({'marginTop':30}, 500);
+});
+});
+</script>
+</head>
+<body>
+<button class="btn">включить</button>
+<br/>
+<div>
+<p>jQuery — библиотека, которая позволяет делать код короче, а также позволяет внутри</p>
+<img src="../img-1.jpg" alt="" />
+<p>страницы настроить код, который бы !!! срабатывал как триггер (предопределенный</p>
+<img src="../img-2.jpg" alt="" />
+<p>набор действий, который выполняется автоматически при наступлении связанного с</p>
+<img src="../img-3.jpg" alt="" />
+<p>ним события, если этот код описываем в области &lt;head&gt; … &lt;/head&gt;).</p>
+<img src="../img-4.jpg" alt="" />
+<p>JQuery упрощает работу с JavaScript, а также вызовы AJAX и DOM-манипуляции</p>
+</div>
