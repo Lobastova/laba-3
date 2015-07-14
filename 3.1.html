@@ -1,0 +1,94 @@
+# laba-3
+<!DOCTYPE html>
+<html>
+<head>
+<title>Вариант 1</title>
+<meta charset="UTF-8" />
+<style>
+body {
+border: 1px solid #E0E0E0;
+width:655px;
+margin: 5px auto;
+padding: 10px;
+}
+img {
+width: 300px;
+margin: 10px;
+display: none;
+}
+.btn {
+width: 300px;
+margin: 10px;
+padding: 5px 0;
+font-family: Arial;
+font-size: 16px;
+cursor: pointer;
+}
+.block {
+width: 655px;
+overflow: hidden;
+}
+.back {
+display: block;
+float: left;
+padding: 5px 10px;
+font-family: Arial;
+font-size: 16px;
+color: #000000;
+border: 1px solid #E0E0E0;
+background: #FFFFFF;
+cursor: pointer;
+border-radius: 3px;
+margin: 20px -12px;
+text-decoration: none;
+transition: 0.25s linear background;
+}
+.back:hover { background: #E0E0E0; }
+</style>
+<script src="../jquery.js"></script>
+<script>
+$(document).ready(function(){
+var $frst = false,
+$scnd = false,
+$anim = false;
+$('.first').click(function(){
+if(!$anim){
+$anim = true;
+setTimeout(function(){ $anim = false}, 1900);
+if(!$frst){
+$('img').eq(0).slideDown(2000);
+$('img').eq(1).slideUp(2000);
+$frst = true;
+} else {
+$('img').eq(1).slideDown(2000);
+$('img').eq(0).slideUp(2000);
+$frst = false;
+}
+}
+});
+$('.second').click(function(){
+if(!$anim){
+$anim = true;
+setTimeout(function(){ $anim = false}, 1900);
+if(!$scnd) {
+$('img').slideDown(2000);
+$scnd = true;
+} else {
+$('img').slideUp(2000);
+$scnd = false;
+}
+}
+});
+});
+</script>
+</head>
+<body>
+<button class="btn first">переключить</button>
+<button class="btn second">включить</button>
+<div class="block">
+<img src="../img-1.jpeg" style="float:left" />
+<img src="../img-2.jpg" style="float:right" />
+</div>
+<br/>
+</body>
+</html>
